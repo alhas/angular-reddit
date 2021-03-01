@@ -1,0 +1,29 @@
+<div class="align-content-center bg-light container w-50 mt-2 border rounded-3 h-auto">
+  <div class="row row-cols-auto">
+    <div class="col display-1 border rounded-3" style="text-align: center; background-color: lightgray ">
+      {{article.votes}}
+      <div class="h5">POINTS</div>
+    </div>
+    <div class="col col-sm-5">
+      <div class="h3 pb-5">
+        <a href="{{article.link}}"></a>
+        {{article.title}}
+        <div class="h6" style="font-style: italic">({{article.domain()}})</div>
+      </div>
+      <ul class="nav">
+        <li class="nav-item mx-2">
+          <a href="#" style="text-decoration: none;">
+            <i (click)="article.voteUp()" class="bi-arrow-up-circle-fill">UpVote</i>
+          </a>
+        </li>
+        <li class="nav-item mx-2 ">
+          <a href="#" style="text-decoration: none">
+            <i (click)="article.voteDown()" class="bi-arrow-down-circle-fill">DownVote</i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
